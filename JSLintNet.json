@@ -1,0 +1,16 @@
+﻿{
+  "ignore": [],
+  "options": {
+    "predef": {
+      "document": true,
+      "$": true,
+      "watermarktext_focus": true,
+      "watermarktext_blur": true,
+      "window": true,
+      "originalInput": true,
+      "setTimeout": true,
+      "CustomizeTwitterWidgetJS": true,
+      "CustomizeTwitterWidget": true
+    }
+  }
+}
