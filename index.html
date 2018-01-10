@@ -1,74 +1,775 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-    <meta name="robot" content="index, follow" />
-    <meta name="title" content="MAQ Consulting | Creative, Digital Marketing, and Technology Solutions" />
-    <meta name="author" content="MAQ Consulting" />
-    <meta name="copyright" content="Copyright MAQ Consulting 2010" />
-    <meta name="language" content="en-us" />
-    <meta name="reply-to" content="MSJobs@MAQConsulting.com" />
-    <meta name="description" content="MAQ Consulting is a staffing firm specializing in contract positions and project roles for some of the leading high tech companies in the Pacific Northwest. We primarily place candidates in the following categories: Marketing professionals of all levels, Content Writers/Editors/Producers and Coordinators, UX Designers, Visual Designers, Information Architects, 3D Artists, Art Directors and Motion Graphic Designers" />
-    <meta name="keywords" content="Staffing, Temporary Employment Agencies, Recruitment & Placement, Associates Temporary Staffing, temporary staffing, temp position, professional temp, professional temp position, professional temp job, find temps, find a temp employee, hire professional employees, temp-to-hire, Employment, Employment service, Employment services industry, Temporary employment, Temporary staffing, Temporary employment agencies, Staffing, Temporary job, Temp jobs, Employment agency, Job search, Job listings, Recruiting, Recruiter, Recruitment, Recruiters, find a job, work in Seattle, Benefits, MAQ consulting, temp agency, contract, contract firms, contract job, contractors, employment, Microsoft, a-, v-, Redmond, careers, career, Excell Data, Allegis, Volt, Filter, Aquent, Sakson and Taylor, S&amp;T, ArtSource, graphic designer jobs, graphic designer jobs in Seattle, graphic designer, 3D artist jobs, 3D artist jobs in Seattle, 3D artist, Content writer jobs, Content writer jobs in Seattle, Content writer, Technical writer jobs, Technical writer jobs in Seattle, Technical writer, Marketing manager jobs, Marketing manager jobs in Seattle, Marketing manager openings, contract jobs, contract positions, Microsoft jobs, creative" />
-    <link rel="shortcut icon" type="image/x-icon" href="../Static/Images/favicon.ico">
-    <title>MAQ Software | Creative, Digital Marketing, and Technology Solutions</title>
-    <link rel="stylesheet" type="text/css" href="../Static/Styles/reset.css?v=20150909">
-    <link rel="stylesheet" type="text/css" href="../Static/Styles/style.css?v=20150909" media="all">
+    <!-- Google Analytics scripts -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-7928102-2', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    <!-- Google Analytics scripts -->
+    
+    <!--<base href="/">-->
+    <meta charset="utf-8" />
+    <title>MAQ Consulting | Staffing Services, Direct Hire, Project Work</title>
+    <meta name="title" content="MAQ Consulting | Staffing Services, Direct Hire, Project Work" />
+    <meta name="theme-color" content="#c00000">
+    <meta name="description" content="MAQ Consulting provides staffing services, direct hire services, and project work for companies and job seekers in marketing, content, and creative fields." />
+    <meta name="keywords" content="maq consulting, staffing, direct hire, project work, marketing, content, creative" />
+    <meta name="ROBOTS" content="FOLLOW,INDEX" />
+    <meta name="og:title" property="og:title" content="MAQ Consulting | Staffing Services, Direct Hire, Project Work" />
+    <meta name="og:description" property="og:description" content="MAQ Consulting provides staffing services, direct hire services, and project work for companies and job seekers in marketing, content, and creative fields." />
+    <meta property="og:image" name="og:image" content="" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="MAQ Consulting | Staffing Services, Direct Hire, Project Work" />
+    <meta name="twitter:description" content="MAQ Consulting provides staffing services, direct hire services, and project work for companies and job seekers in marketing, content, and creative fields." />
+    <meta name="twitter:image" content="" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <meta name="fragment" content="!">
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <!-- Favicone Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="icon" type="image/png" href="img/favicon.ico">
+    <link rel="apple-touch-icon" href="img/favicon.ico">
+    <!-- CSS -->
+    <link href="css/style.css?v=20170829" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap.css?v=20170822" rel="stylesheet" type="text/css" />
+    <link href="css/font-awesome.css?v=20170822" rel="stylesheet" type="text/css" />
+    <link href="css/ionicons.css?v=20170822" rel="stylesheet" type="text/css" />
+    <link href="css/plugin/sidebar-menu.css?v=20170822" rel="stylesheet" type="text/css" />
+    <link href="css/plugin/animate.css?v=20170822" rel="stylesheet" type="text/css" />
+    <link href="css/jquery-ui.css?v=20170822" rel="stylesheet" type="text/css" />
+    <link href="css/plugin/YTPlayer.css?v=20170822" rel="stylesheet" />
+    <link href="css/plugin/owl.carousel.2.0.0-beta.3.min.css" rel="stylesheet" />
+    <!-- Js -->
+    <!-- Github Pages hack to allow SPA refresh without receiving 404. -->
+    <script>
+        (function () {
+            var redirect = sessionStorage.redirect;
+            delete sessionStorage.redirect;
+            if (redirect && redirect != location.href) {
+                history.replaceState(null, null, redirect);
+            }
+        })();
+    </script>
+    <!-- /Github Pages hack. -->
 </head>
+
 <body>
+    <!-- Preloader -->
+    <section id="preloader">
+        <div class="loader" id="loader">
+            <div class="loader-img"></div>
+        </div>
+    </section>
+    <!-- End Preloader -->
+    <!-- Site Wraper -->
     <div class="wrapper">
-        <div class="page">
-            <div id="nav">
+        <!-- HEADER -->
+        <header id="header" class="header">
+            <div class="container">
+                <!-- Logo -->
                 <div class="logo">
-                    <a href="#Main">
-                        <img src="../Static/Images/MAQConsulting_logo.png" alt="MAQ Consulting Logo" title="MAQ Consulting - Creative, Digital Marketing, and Technology Solutions" />
+                    <a data-url="header" class="hiretalent i-am-link">
+                        <img class="logo-dark" src="img/maqconsulting.png" alt="MAQ Consulting" />
                     </a>
                 </div>
-                <ul class="nav">
-                    <li id="hireTalent"><a onclick="showLink(1)" href="#HireTalent">Hire Talent</a></li>
-                    <li id="findWork">
-                        <a onclick="showLink(2)" href="http://maqconsulting.catsone.com/careers/index.php">
-                            Find
-                            Work
-                        </a>
-                    </li>
-                    <li id="benefits"><a href="#Benefits">Benefits</a></li>
-                    <li id="contact"><a href="#ContactUs">Contact</a></li>
-                </ul>
+                <!-- End Logo -->
+                <!-- Mobile Navbar Icon -->
+                <div class="nav-mobile nav-bar-icon">
+                    <span></span>
+                </div>
+                <!-- End Mobile Navbar Icon -->
+                <!-- Navbar Navigation -->
+                <div class="nav-menu singlepage-nav">
+                    <ul class="nav-menu-inner">
+                        <li>
+                            <a data-url="hiretalent" class="hiretalent i-am-link">Hire Talent</a>
+                        </li>
+                        <li>
+                            <a data-url="expertise" class="expertise i-am-link">Our Expertise</a>
+                        </li>
+                        <li>
+                            <a data-url="findwork" class="findwork i-am-link">Find Work</a>
+                        </li>
+                        <li>
+                            <a data-url="benefits" class="benefits i-am-link">Benefits</a>
+                        </li>
+                        <li>
+                            <a data-url="contact" class="contact i-am-link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- End Navbar Navigation -->
             </div>
-            <div id="PageContainer" class="main">
+        </header>
+        <!-- END HEADER -->
+        <!-- CONTENT --------------------------------------------------------------------------------->
+        <!-- Intro Section -->
+        <section class="inner-intro dark-bg bg-image overlay-dark parallax parallax-background1 datamanagementposter" data-background-img="img/Banners/hero.png">
+            <div class="container text-center">
+                <div class="row title">
+                    <h1 class="hidden">Connecting World's Biggest Brands</h1>
+                    <h2 class="h2">Connecting World's Biggest Brands</h2>
+                    <h3 class="h4">With Creative, Marketing, and Technical Communicators</h3>
+                    <a data-url="hiretalent" class="btn btn-md btn-white-line hiretalent i-am-link">Hire Talent</a>
+                    <a data-url="findwork" class="btn btn-md btn-white-line findwork i-am-link">Find Work</a>
+                </div>
+            </div>
+        </section>
+        <!-- End Intro Section -->
+        <div class="clearfix"></div>
+        <section id="hiretalent" class="wow fadeIn pt-70 pb-60 pt-sm-80">
+            <div class="container">
 
+                <div class="text-center pb-30" style="display:block;">
+
+                    <h3 class="h4">Hire Talent</h3>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-4" style="padding-bottom:27px;">
+                        <h4>Contract Services</h4>
+                        <p>
+                            Independent professionals play a valuable role in today’s economy. Whether it’s strategic planning, creative inspiration,
+                            or flawless execution; MAQ Consulting offers the precise consulting you need, when you need it,
+                            for short and long term contract staffing needs.
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-4">
+                        <h4>Direct Hire Services</h4>
+                        <p>
+                            MAQ Consulting identifies and delivers the right candidates for your direct placement needs. We are connecting and screening
+                            candidates every day and have an extraordinary network that enables us to make optimal matches.
+                            We have a superior source of candidates. Whether you require assistance with one position or
+                            many, MAQ Consulting has the capacity and expertise to deliver quality candidates.
+                        </p>
+                    </div>
+
+                    <div class="col-md-4">
+                        <h4>Project Work</h4>
+                        <p>
+                            If you have a project that is more deliverable based, let us help. Just tell us what you need to have done and we’ll find
+                            the talent, take care of the project management and be responsible for the end result. We’ll
+                            bring our expert knowledge and integrity to the table, provide a smooth experience and deliver
+                            a top notch product.
+                        </p>
+                    </div>
+                </div>
+                <div class="blog-post pt-40 pb-0">
+                    <blockquote>
+                        <h4>When to use Contract Services</h4>
+                        <ul class="Circlebullets" style="font-size:13px; font-weight:400;">
+                            <li>Coverage for vacations, maternity/paternity leaves, or other leaves of absence</li>
+                            <li>Support during hiring freezes</li>
+                            <li>Immediate need for staff without the lead time needed for direct hires</li>
+                            <li>Specialized talent to enhance your team’s capabilities</li>
+                            <li>Peaks in workload or unexpected new projects</li>
+                            <li>Reduction of overtime costs for time-sensitive projects</li>
+                            <li>Elimination of employer liabilities including benefits, insurance, and taxes</li>
+                        </ul>
+                    </blockquote>
+                </div>
+
+
+                <!--Talent Inquiries-->
+
+                <div class="text-center pt-40">
+                    <h4>Talent Inquiries</h4>
+
+                    <p>
+                        Send an e-mail to
+                        <br>
+                        <a style="font-weight:600;" href="mailto:MSJobs@MAQConsulting.com">
+                                <i class="fa fa-envelope-o left"></i>MSJobs at MAQConsulting dot com
+                            </a>
+                    </p>
+
+                </div>
+
+
+
+                <div class="blog-post pt-0 pb-0">
+                    <div class="text-center" style="font-size:13px; font-weight:400;">
+                        <div class="row">
+                            <p>
+                                <div style="width:100%">To help you get a faster response from us for your open position request, include the following
+                                    in your e-mail:
+                                    <br> (1) an outline of the project, (2) specific skills needed, and (3) timeline for
+                                    completion (duration)</div>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="clear">
+        </section>
+        <hr />
+        <!-- Service Section -->
+        <section id="expertise" class="pt-70 pb-70 pb-sm-80 dark-bg overlay-dark80" style="background-image: url('img/Banners/expertise.jpg');"
+            data-stellar-background-ratio="0.5">
+            <div class="wow fadeIn container text-center animated" style="visibility: visible; animation-name: fadeIn;">
+                <h3>Our Expertise</h3>
+                <div class="spacer-40"></div>
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 ">
+
+                        <div class="page-icon-top"><i class="ion ion-social-usd"></i></div>
+                        <h5 class="serviceTitle">Marketing </h5>
+                        <ul class="HiddenBullets" style="text-size:13px; text-weight:400">
+                            <li>Marketing Communications</li>
+                            <li>Product Marketing</li>
+                            <li>Partner Marketing</li>
+                            <li>Event Management</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 col-sm-6 ">
+
+                        <div class="page-icon-top"><i class="ion ion-edit"></i></div>
+                        <h5 class="serviceTitle">Content </h5>
+                        <ul class="HiddenBullets">
+                            <li>Technical Writing/Editing</li>
+                            <li>Programming Writing</li>
+                            <li>Content Producing</li>
+                            <li>Copy Editing</li>
+
+                        </ul>
+                    </div>
+                    <div class="col-md-4 col-sm-6 ">
+
+                        <div class="page-icon-top"><i class="ion ion-lightbulb"></i></div>
+                        <h5 class="serviceTitle">Creative </h5>
+                        <ul class="HiddenBullets">
+                            <li>UX/UI Design/Visual Design</li>
+                            <li>Flash Design and Production</li>
+                            <li>Visual Design</li>
+                            <li>3D Modeling/Texturing/Animating</li>
+                            <li>Web Production</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+        </section>
+        <!-- End Service Section -->
+        <hr />
+        <!-- Accordian Section -->
+        <section id="findwork" class="pt-70 pb-60 ptb-sm-80">
+            <div class="container">
+                <div class="text-center">
+                    <h3>Find Work</h3>
+                    <div class="spacer-15"></div>
+                    <p class="lead">Below are current job listings. Click a listing for further information or to apply.</p>
+                </div>
+                <div class="spacer-60"></div>
+                <!--<div class="row">
+                    <!- Accordian1 ->
+                    <div class="col-md-12  mt-30">
+                        <div class="accordion">
+                            <div class="row plr-20">
+                                <div class="col-md-12 mobile-form">
+                                    <h4>ID</h4>
+                                    <form>
+                                        <div class="form-field-wrapper">
+                                            <input class="input-sm form-full" id="form-name" type="text" name="form-name" placeholder="ID" required>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-1 col-sm-1 desktop-form">
+                                    <h4>ID</h4>
+                                    <form>
+                                        <div class="form-field-wrapper">
+                                            <input class="input-sm form-full" id="form-name" type="text" name="form-name" placeholder="ID" required>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-6 col-sm-1 ">
+                                    <h4>Postition</h4>
+                                    <form>
+                                        <div class="form-field-wrapper desktop-form">
+                                            <input class="input-sm form-full" id="form-name" type="text" name="form-name" placeholder="Position" required>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-2 col-sm-1 ">
+                                    <h4>Posted</h4>
+                                    <form>
+                                        <div class="form-field-wrapper desktop-form">
+                                            <input class="input-sm form-full" id="form-name" type="text" name="form-name" placeholder="Date" required>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-3 col-sm-1 ">
+                                    <h4>Location</h4>
+                                    <form>
+                                        <div class="form-field-wrapper desktop-form">
+                                            <input class="input-sm form-full" id="form-name" type="text" name="form-name" placeholder="Location" required>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="accordion-section">
+                                <h6 class="accordion-title">
+                                    <div class="row">
+                                        <div class="col-md-1">
+                                            #265234
+                                        </div>
+                                        <div class="col-md-6">
+                                            Web Development Site Manager 2
+                                        </div>
+                                        <div class="col-md-2">
+                                            Aug 29
+                                        </div>
+                                        <div class="col-md-2">
+                                            Redmond, WA
+                                        </div>
+                                    </div>
+                                </h6>
+                                <div class="accordion-content">
+                                    <div class="row">
+                                        <div class="col-md-10">
+                                            <p>Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel</p>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <a style="width:125px;" class="btn btn-md btn-black-line">Apply Now</a>
+                                            <a style="width:125px;" class="btn btn-md btn-black-line">Share</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-section">
+                                <h6 class="accordion-title">
+                                    <div class="row">
+                                        <div class="col-md-1">
+                                            #265237
+                                        </div>
+                                        <div class="col-md-6">
+                                            DESIGN DEVELOPER/UI IMPLEMENTATION ARTIST
+                                        </div>
+                                        <div class="col-md-2">
+                                            Aug 29
+                                        </div>
+                                        <div class="col-md-2">
+                                            Redmond, WA
+                                        </div>
+                                    </div>
+                                </h6>
+                                <div class="accordion-content">
+                                    <div class="row">
+                                        <div class="col-md-10">
+                                            <p>Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel</p>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <a style="width:125px;" class="btn btn-md btn-black-line">Apply Now</a>
+                                            <a style="width:125px;" class="btn btn-md btn-black-line">Share</a>>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-section">
+                                <h6 class="accordion-title">
+                                    <div class="row">
+                                        <div class="col-md-1">
+                                            #265294
+                                        </div>
+                                        <div class="col-md-6">
+                                            FINANCIAL ANALYST 2
+                                        </div>
+                                        <div class="col-md-2">
+                                            Aug 29
+                                        </div>
+                                        <div class="col-md-2">
+                                            Redmond, WA
+                                        </div>
+                                    </div>
+                                </h6>
+                                <div class="accordion-content">
+                                    <div class="row">
+                                        <div class="col-md-10">
+                                            <p>Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel</p>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <a style="width:125px;" class="btn btn-md btn-black-line">Apply Now</a>
+                                            <a style="width:125px;" class="btn btn-md btn-black-line">Share</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-section">
+                                <h6 class="accordion-title">
+                                    <div class="row">
+                                        <div class="col-md-1">
+                                            #267234
+                                        </div>
+                                        <div class="col-md-6">
+                                            SEARCH ENGINE MARKETING MANAGER
+                                        </div>
+                                        <div class="col-md-2">
+                                            Aug 26
+                                        </div>
+                                        <div class="col-md-2">
+                                            Redmond, WA
+                                        </div>
+                                    </div>
+                                </h6>
+                                <div class="accordion-content">
+                                    <div class="row">
+                                        <div class="col-md-10">
+                                            <p>Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel</p>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <a style="width:125px;" class="btn btn-md btn-black-line">Apply Now</a>
+                                            <a style="width:125px;" class="btn btn-md btn-black-line">Share</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!- Accordian2 ->
+                </div>
+                <div id="Pagination" class="mt-30 ">
+                    <p id="Previous" data-clicked="0" style="display:none" class="btn-link-a pull-left"><a><i class="ion ion-arrow-left-b"></i>PREVIOUS</a></p>
+                    <p id="Next" data-clicked="1" class="btn-link-a pull-right"><a>NEXT<i class="ion ion-arrow-right-b"></i></a></p>
+                </div>-->
+                <div class="container">
+                    <div class="loadingIcon Loading">
+                    </div>
+                    <div id="jobListingContainer" class="row">
+                        <div class="col-lg-11 col-sm-9 col-xs-12">
+                            <input id="searchJobListing" type="text" value="Search by Job Order #, Date Posted, Title, Location" class="helpText" title="Search by Job Order #, Date Posted, Title, Location"
+                            />
+                        </div>
+                        <div id="reset" class="col-lg-1 col-sm-2 col-xs-12 col-lg-offset-1 col-sm-offset-1">
+                            <a id="resetSearch" value='RESET' onclick="resetSearchBox();" class="btn btn-md btn-black-line">Reset</a>
+                        </div>
+                        <div id="jobListingsData"></div>
+                    </div>
+                    <div id="jobDescriptionContainer" class="row">
+
+                    </div>
+                    <div class="row">
+                        <div class="container">
+                            <div id="jobActionBtnContainer" class='col-lg-3 col-md-3 col-sm-3 col-xs-12'>
+                                <div class='col-lg-12 col-xs-12'>
+                                    <a style="width:125px;" class="btn btn-md btn-black-line" href="mailto:msjobs@maqconsulting.com">
+                                        <div class='' id='applyJobBtn'>Apply Now</div>
+                                    </a>
+                                </div>
+                                <div class='col-lg-12 col-xs-12'>
+                                    <a style="width:125px;" value='SEND TO FRIEND' class="btn btn-md btn-black-line" id='sendToFriendBtn'>Share</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <!-- End Accordian Section -->
+        <hr />
+        <!-- Benefits Section -->
+        <section id="benefits" class="pt-70 pb-85 ptb-sm-80">
+            <div class="container ">
+                <div class="text-center">
+                    <h3>Benefits</h3>
+                    <div class="spacer-15"></div>
+                    <p class="lead">
+                        MAQ Consulting offers one of the best benefit packages in the staffing industry. We invite you to compare the benefits plan
+                        below to other staffing firms in the Pacific Northwest. In our survey, we did not find any other
+                        company that offered comparable benefits. To help you compare benefits as you look to select your
+                        next employer, consider the following:
+                    </p>
+
+
+                </div>
+
+
+                <div class="spacer-60"></div>
+                <div class="row ">
+                    <div class="col-md-4 mtb-xs-30">
+                        <div class="Pricing-box pBenefits ">
+                            <div class="price-title">
+                                <h4>Medical and Dental Insurance</h4>
+                            </div>
+                            <hr />
+                            <div class="pricing-features spacing-grid ">
+                                Many other staffing firms offer multiple medical plans starting with a very limited plan. You, as an employee, then have
+                                to pay extra money every month to enroll into a medical insurance plan with decent benefits.
+                                We pay your insurance premiums in full for a comprehensive medical and dental plan. Meritain
+                                Health, an Aetna Company, is our medical insurance provider with a great Aetna provider network
+                                of doctors and hospitals. Unlike other staffing firms, we do not ask you to pay to enroll
+                                into our comprehensive medical insurance plan.
+                                <br>
+                                <br> We pay 100% of our employees' comprehensive medical and dental insurance premiums. You
+                                may add dependents to your health insurance policy by paying additional insurance premiums
+                                on a pre-tax basis.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mtb-xs-30">
+                        <div class="Pricing-box pBenefits">
+                            <div class="price-title ">
+                                <h4>401(k) Plan</h4>
+                            </div>
+                            <hr />
+                            <div class="pricing-features spacing-grid ">
+                                Most employers in the staffing industry offer a 401(k) retirement plan. Not all 401(k) plans are created equal. In our 401(k)
+                                retirement plan, the company matches 50% of employee contributions up to 6% of your pre-tax
+                                pay. Unlike any other company in the staffing industry that we know of, our company contributions
+                                vest immediately. In addition, we offer 15 low-cost Vanguard funds to choose from for your
+                                401(k) investments. Once your assignment ends, you can rollover the 401(k) plan funds to
+                                a new employer or convert to an Individual Retirement Account (IRA).
+                                <br>
+                                <br> Our 401(k) retirement plan, includes access to low-cost Vanguard funds, with up to 3%
+                                company match and immediate vesting. Joining eligibility begins on the first of the month
+                                following one month of employment.
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="col-md-4 mtb-xs-30">
+                        <div class="Pricing-box pBenefits">
+                            <div class="price-title  ">
+                                <h4>Paid Time Off (PTO)</h4>
+                            </div>
+                            <hr />
+                            <div class="pricing-features spacing-grid">
+                                Our paid time off (PTO) plan is simple. As a full time employee, you accrue 10 hours of paid time off every month you work
+                                with us. Many other staffing firms offer limited or no paid vacation days. Some employers
+                                try to limit your use or payment for paid vacation by requiring you to complete 1000 or more
+                                service hours before you qualify for any paid vacation. Employer policies vary, so ask before
+                                you choose an employer to represent you.
+                                <br>
+                                <br> Accrued paid time off (15 PTO days per year) can be used for any reason including holidays,
+                                personal days or sick days.
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row pt-40">
+                    <h3 class="text-center" style="width:100%">Benefits Partners</h3>
+                    <div class="spacer-30"></div>
+                    <div class="col-md-4 offset-md-2">
+                        <div class="Pricing-box partners">
+                            <div class="price-title">
+                                <h4>Health Insurance</h4>
+                            </div>
+                            <hr />
+                            <img alt="Aetna" title="Aetna" src="img/Logos/meritain.png">
+                            <br> Meritain Health, an Aetna Company, serves over 2,300 clients nationally. The company provides
+                            plan administration and innovative wellness, medical management, disease management, network
+                            management, and cost management services.
+
+                            <br>
+                            <a href="https://www.meritain.com" class="btn btn-md btn-black">Learn More</a>
+
+                        </div>
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="Pricing-box partners">
+                            <div class="price-title">
+                                <h4>Retirement Savings</h4>
+                            </div>
+                            <hr />
+                            <img alt="Fidelity" Title="Fidelity" src="img/Logos/Fidelity.png">
+                            <br> Founded in 1946, Fidelity provides brokerage services, including but not limited to trading,
+                            mutual funds, stocks, bonds, IRAs and 401(k) rollovers. Fidelity consistently ranks among the
+                            best in their industry.
+                            <br>
+                            <br> Try <a style="text-decoration:underline" href="https://nb.fidelity.com/public/nb/401k/tools/calculators/contributioncalculator">this</a>                            calculator to see how increasing your contributions to an employer sponsored 401(k) plan could
+                            potentially increase your retirement savings.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Pricing Section -->
+        <hr />
+        <!--Contact Info-->
+        <section id="contact" class=" pt-70 pb-60 ptb-sm-80">
+            <div class="container">
+                <div class="text-center mb-60">
+                    <h3>Contact Us</h3>
+                </div>
+                <div class="row" style="padding-left:8%;">
+                    <div class="col-md-3">
+                        <div class="contact-box-left">
+                            <div class="contact-icon-left"><i class="ion ion-ios-location"></i></div>
+                            <h6>Address</h6>
+                            <p>
+                                <a class="font-weight-normal" target="_blank" href="https://www.google.com/maps/search/?api=1&query=MAQ Software Redmond WA">
+                                    15446 Bel-Red Road, Second Floor,<br />
+                                    Redmond, WA 98052
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 offset-md-1">
+                        <div class="contact-box-left">
+                            <div class="contact-icon-left"><i class="ion ion-ios-email"></i></div>
+                            <h6>Email</h6>
+                            <p>
+                                <a href="mailto:MSJobs@MAQConsulting.com">MSJobs at MAQConsulting dot com</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 ">
+                        <div class="contact-box-left">
+                            <div class="contact-icon-left"><i class="ion ion-ios-telephone"></i></div>
+                            <h6>Call Us</h6>
+                            <p>
+
+                                <span><a href="tel:+1 425 526 5399">+1 425 526 5399</a></span><br />
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End Contact Info-->
+        <!--Map-->
+        <!--<div class="" id="map"></div>-->
+        <!--<section class="map">
+            <iframe width="100%"
+                    height="650"
+                    frameborder="0" style="border:0"
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAmjD81Lsw8gUkA-9q6mJG7EotQgaSke74
+                        &q=MAQ+Consulting,Seattle+WA" allowfullscreen></iframe>
+        </section>-->
+        <div class="map" id="map"></div>
+        <!--End Map-->
+        <!-- FOOTER -->
+        <footer style="" class="footer pt-60">
+            <div class="container">
+                <div class="row mb-30">
+                    <div class="col-md-5  col-sm-4 mb-30">
+                        <h6>Follow Us On</h6>
+                        <ul class="social">
+                            <li><a target="_blank" href="https://www.facebook.com/pages/MAQ-Consulting/67256737143?v=photos&ref=ts#!/pages/MAQ-Consulting/67256737143?v=wall"><i class="fa fa-facebook"></i></a></li>
+                            <li><a target="_blank" href="https://www.linkedin.com/company/825092?trk=null"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a target="_blank" href="https://twitter.com/maqconsulting"><i class="fa fa-twitter"></i></a></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="col-md-4 offset-md-3 col-sm-12">
+                        <h6>Address:</h6>
+                        <a class="font-weight-normal" target="_blank" href="https://www.google.com/maps/search/?api=1&query=MAQ Software Redmond WA">
+                            15446 Bel-Red Road, Second Floor,<br />
+                            Redmond, WA 98052
+                        </a>
+                        <ul class="link-small">
+                            <li>
+                                <span>Email: </span>
+                                <a href="mailto:MSJobs@MAQSoftware.com">
+                                    <i class="fa fa-envelope-o left"></i><a href="mailto:MSJobs@MAQConsulting.com">MSJobs at MAQConsulting dot com</a>
+                                </a>
+                            </li>
+                            <li>Phone: <a href="tel:+1 425 526 5399"><i class="fa fa-phone left"></i>+1 425 526 5399</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <section class="copyright ptb-15">
+                <div class="container">
+                    <p>
+                        &copy; 2017 <a data-url="header" class="hiretalent i-am-link"><b>MAQ Consulting</b></a>. All Rights
+                        Reserved.
+                    </p>
+                </div>
+            </section>
+        </footer>
+        <!-- END FOOTER -->
+        <!-- Scroll Top -->
+        <a class="scroll-top">
+            <i class="fa fa-angle-double-up"></i>
+        </a>
+        <!-- End Scroll Top -->
         </div>
-        <div class="footer">
-            <div class="leftFooter">
-                <a href="http://www.linkedin.com/company/825092?trk=null" target="_blank">
-                    <img src="/Static/Images/linkedin_large.png" title="Follow us on LinkedIn" alt="Follow us on LinkedIn"
-                         onmouseover="this.src='/Static/Images/linkedin_large_hover.png'" onmouseout="this.src='/Static/Images/linkedin_large.png'" />
-                </a>
-                <a href="http://twitter.com/maqconsulting" target="_blank">
-                    <img src="/Static/Images/twitter_large.png" alt="Follow us on Twitter" title="Follow us on Twitter"
-                         onmouseover="this.src='/Static/Images/twitter_large_hover.png'" onmouseout="this.src='/Static/Images/twitter_large.png'" />
-                </a>
-                <a href="http://www.facebook.com/pages/MAQ-Consulting/67256737143?v=photos&amp;ref=ts#!/pages/MAQ-Consulting/67256737143?v=wall"
-                   target="_blank">
-                    <img src="/Static/Images/facebook_large.png" alt="Visit our page on Facebook" title="Visit our page on Facebook"
-                         onmouseover="this.src='/Static/Images/facebook_large_hover.png'" onmouseout="this.src='/Static/Images/facebook_large.png'" />
-                </a>
-            </div>
-            <div class="center">
-                &#169; 2000-2015 MAQ Consulting | All rights reserved.
-            </div>
-            <div class="rightFooter">
-                <img src="/Static/Images/Inc500.png" title="Inc. 5000, Fastest Growing Companies in America"
-                     alt="Inc. 5000, Fastest Growing Companies in America" />
-            </div>
-        </div>
-    </div>
-    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js?v=20150909" type="text/javascript"></script>
-    <script src="Static/Scripts/common.js?v=20150909" type="text/javascript"></script>
-    <script src="Static/Scripts/layout.js?v=20150909" type="text/javascript"></script>
+        <!-- Site Wraper End -->
+        <!--<section id="body" class="hidden">
+        <div data-ng-view="" autoscroll="true"></div>
+    </section>-->
+        <!-- Data Dump -->
+        <div class="hide" id="dumpData"></div>
+        <!-- JS -->
+        <!--<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular-route.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular-resource.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular-animate.min.js"></script>-->
+        <!-- Load app main script -->
+        <script src="js/plugin/tether.min.js?v=20170822" type="text/javascript"></script>
+        <script src="js/jquery-1.11.2.min.js" type="text/javascript"></script>
+        <script src="js/plugin/jquery.easing.js" type="text/javascript"></script>
+        <script src="js/jquery-ui.min.js" type="text/javascript"></script>
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="js/plugin/jquery.flexslider.js" type="text/javascript"></script>
+        <script src="js/plugin/jquery.fitvids.js" type="text/javascript"></script>
+        <script src="js/plugin/jquery.viewportchecker.js" type="text/javascript"></script>
+        <script src="js/plugin/jquery.stellar.min.js" type="text/javascript"></script>
+        <script src="js/plugin/wow.min.js" type="text/javascript"></script>
+        <script src="js/plugin/jquery.colorbox-min.js" type="text/javascript"></script>
+        <script src="js/plugin/owl.carousel.min.js" type="text/javascript"></script>
+        <script src="js/plugin/isotope.pkgd.min.js" type="text/javascript"></script>
+        <script src="js/plugin/masonry.pkgd.min.js" type="text/javascript"></script>
+        <script src="js/plugin/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+        <script src="js/plugin/jquery.fs.tipper.min.js" type="text/javascript"></script>
+        <script src="js/plugin/mediaelement-and-player.min.js"></script>
+        <script src="js/plugin/jquery.validate.min.js" type="text/javascript"></script>
+        <script src="js/theme.js" type="text/javascript"></script>
+        <script src="js/plugin/sidebar-menu.js" type="text/javascript"></script>
+        <script src="js/navigation.js" type="text/javascript"></script>
+        <script src="js/plugin/jquery.singlePageNav.js" type="text/javascript"></script>
+        <script src="js/contact-form.js" type="text/javascript"></script>
+        <script src="js/common.js?v=20170830" type="text/javascript"></script>
+        <!--<script src="js/app.js?v=20170828.3" type="text/javascript"></script>-->
+        <script src="https://maps.googleapis.com/maps/api/js?v=3&sensor=true&key=AIzaSyBHkJlVTrAkgcD9jJxo_CyHx0YZZtX65iY&callback=initMap"></script>
+        <!--<script src="https://maqconsulting.catsone.com/xml/index.php?siteID=5046&portalID=850&subdomain=maqconsulting&sort=posted&callback=JSON_CALLBACK"></script>-->
+        <!--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>-->
+        <!--
+        <script src="js/theme.js?v=20170828.5" type="text/javascript"></script>
+        <script src="js/navigation.js?v=20170822" type="text/javascript"></script>
+        <script src="js/contact.js?v=20170828.1" type="text/javascript"></script>
+        <script src="js/common.js?v=20170828.1" type="text/javascript"></script>
+        <script src="js/home.js?v=20170828.3" type="text/javascript"></script>
+        <script src="js/news.js?v=20170823.2" type="text/javascript"></script>
+        <!--<script src="js/careers.js?v=20170822"type="text/javascript" ></script>-->
+        <script type="application/ld+json">
+            { "@context" : "http://schema.org",
+            "@type" : "Organization",
+            "name" : "MAQ Consulting",
+            "image" : "https://maqconsulting.com/img/maqconsulting.png",
+            "address" : {
+            "@type": "PostalAddress",
+            "addressLocality": "Redmond",
+            "addressRegion": "WA ",
+            "postalCode": "98052",
+            "streetAddress": "15446 Bel-Red Road, Second Floor" },
+            "url" : "https://maqconsulting.com/",
+            "logo" : "https://maqconsulting.com/img/maqconsulting.png", 
+            "email":"MSJobs@MAQConsulting.com",
+            "telephone":"+1-425-526-5399",
+            "sameAs" : [ "https://www.facebook.com/MAQConsulting",
+            "https://twitter.com/maqconsulting",
+            "https://www.linkedin.com/company/825092"]
+            }
+        </script>
 </body>
+
 </html>
