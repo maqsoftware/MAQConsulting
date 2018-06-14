@@ -1,0 +1,1002 @@
+﻿body, html, div, blockquote, img, label, p, h1, h2, h3, h4, h5, h6, pre, ul, ol,
+li, dl, dt, dd, form, a, fieldset, input, th, td {
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+    outline: none;
+}
+
+.bold, .boldRight, .paraBold, .childleftParaBold {
+    font-weight: bold;
+}
+
+.page {
+    width: 980px;
+    height: 830px;
+}
+
+.bold, .boldRight, .paraBold {
+    font-size: 13px;
+}
+
+.boldRight, .paraBold, .leadParaLeft, .leadParaRight, .center {
+    padding-top: 10px;
+}
+
+.paraBold, .mostRightMain, .mostRightMainHome, .mostRightMainInner, .leadParaRight, .right, .socialImages {
+    float: right;
+}
+
+body {
+    font-family: "Segoe UI",arial,sans-serif,tahoma,verdana;
+    color: #474a48;
+    font-size: 13px;
+    line-height: 18px;
+    height: 100%;
+    overflow-y: scroll;
+    background: url('..Static\Images\gradient.png') repeat-x;
+}
+
+.wrapper {
+    border-top: #262b27 9px solid;
+    border-bottom: #262b27 9px solid;
+    width: 1050px;
+    min-height: 100%;
+}
+
+.wrapper, .footer {
+    margin: 0 auto;
+}
+
+#nav {
+    padding-top: 30px;
+    border-bottom: #e0e0e0 1px solid;
+    height: 80px;
+}
+
+.logo {
+    width: 350px;
+}
+
+.logo, .leftMain, .rightMain, .leadParaLeft, .left, .center, .leftChild, .leftChildHire {
+    float: left;
+}
+
+.leftChildHire {
+    height: 700px;
+}
+
+    .nav li:hover {
+        border-bottom: #fdbc34 4px solid;
+    }
+
+.nav {
+    float: right;
+    margin-top: 19px;
+}
+
+    .nav li {
+        font-size: 18px !important;
+        font-weight: normal !important;
+        text-transform: uppercase;
+        display: inline;
+        text-align: center;
+        padding: 0 4px 0.5px 4px;
+        margin-left: 25px;
+        margin-top: 10px;
+    }
+
+        .nav li:hover, .nav li:active {
+            cursor: pointer;
+        }
+
+        .nav li a {
+            color: #262b27;
+        }
+
+            .nav li a:hover, .nav li a:hover {
+                color: #262b27 !important;
+            }
+
+        .nav li:active {
+            border-bottom: #fdbc34 4px solid;
+        }
+
+#slideshow, .footer, .splashChild, .homeBodyBottomSpacing {
+    clear: both;
+}
+
+#slideshow {
+    height: 472px;
+}
+
+#slideshow, .childPara, .splashChild, .rightHeaderChild, .topParaBenefitsRight, .medicalSpace {
+    padding-top: 5px;
+}
+
+#slideshow, .topPara, .splashChild {
+    padding-bottom: 8px;
+}
+
+.hide {
+    display: none;
+}
+
+.rightMainGreatCompany {
+    padding-top: 8px;
+}
+
+.topPara, .newsAndTipsHeight {
+    padding-top: 9px;
+}
+
+.leftMain, .mostRightMain, .mostRightMainHome, .mostRightMainInner, .leftChild, .leftChildHire, .positionFix {
+    position: relative;
+}
+
+.leftMain, .rightMain {
+    width: 33%;
+}
+
+.leftMain, .rightMain, .leftChild, .leftChildHire {
+    margin-top: 7px;
+    margin-right: 10px;
+}
+
+.leftMain {
+    padding: 19px 0 7px 10px;
+}
+
+.rightMain {
+    padding: 1px 10px 0 10px;
+    border-left: 1px solid #c1e1ed;
+    border-right: 1px solid #c1e1ed;
+}
+
+.mostRightMain {
+    padding: 3px 0 0 10px;
+}
+
+/*Added*/
+.mostRightMainInner {
+    border: 3px solid #FDBC34;
+    padding: 2px 11px 5px 11px;
+    width: 207px;
+    margin-top: 19px;
+    margin-bottom: 20px;
+}
+
+.mostRightMain, .childleftPara {
+    margin-top: 5px;
+}
+
+.mostRightMainHome {
+    padding: 2px 10px 0 10px;
+    margin-top: 6px;
+}
+
+.newsAndTipsHeight {
+    height: 232px;
+}
+
+#newsAndTips {
+    list-style-type: none;
+    height: 180px;
+}
+
+    #newsAndTips li {
+        padding-top: 4px;
+    }
+
+    #newsAndTips iframe {
+        height: 180px !important;
+        display: none;
+    }
+
+.loading {
+    margin-top: 11px;
+}
+
+.leadText {
+    margin-right: 5px;
+}
+
+.leadParaLeftText {
+    padding-bottom: 37px;
+    padding-left: 0;
+}
+
+.leadParaLeftText2 {
+    padding-bottom: 85px;
+}
+
+.leadParaLeftText3 {
+    padding-bottom: 22px;
+}
+
+.leadParaRightText {
+    margin-left: -9px;
+}
+
+.leadParaRightText, .removeSpace {
+    padding-bottom: 5px;
+}
+
+.leadParaLeft {
+    width: 10%;
+}
+
+.leadParaRight {
+    width: 80%;
+}
+
+.footer {
+    width: 980px;
+    height: 80px;
+    border-top: #e0e0e0 1px solid;
+}
+
+.left {
+    padding: 10px 7px 0 0;
+}
+
+.center {
+    padding-left: 250px;
+    font-size: 10px;
+    color: #262b27;
+    margin-top: 39px;
+}
+
+.right {
+    padding: 10px 2px 0 2px;
+}
+
+.right, .benefitTable {
+    margin: 0;
+}
+
+    .right img {
+        padding-top: 1px;
+    }
+
+.leftChild, .leftChildHire {
+    width: 700px;
+    padding: 0 20px 20px 0px;
+}
+
+.childleftParaInner, .childleftParaBold {
+    margin-top: 8px;
+}
+
+.childList {
+    font-family: "Segoe UI";
+    font-size: 13px;
+    color: #474A48;
+    font-size: 13px;
+    line-height: 19px;
+    padding-bottom: 20px;
+    padding-top: 5px;
+}
+
+    .childList li {
+        background: url("../Images/bullet.png") no-repeat 0 0px;
+        padding-left: 18px;
+    }
+
+.splashChild {
+    margin-top: 2px;
+}
+
+.paraSecond {
+    padding-top: 20px;
+}
+
+.rightHeaderChild {
+    text-transform: uppercase;
+    font-family: "Segoe UI";
+    font-size: 18px;
+    color: #FDBC34;
+    margin-bottom: 6px;
+    font-weight: normal;
+}
+
+.benefitTable {
+    font: 12px 'Segoe UI';
+    vertical-align: middle;
+    text-align: center;
+    border: 1px solid #f0f0f0;
+    padding: 0;
+    width: 575px;
+}
+
+.benefitColumn {
+    width: 30%;
+    text-align: left;
+}
+
+.benefitColumn, .benefitCell {
+    border-right: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.benefitColumn, #twitter {
+    padding-left: 5px;
+}
+
+.benefitCell {
+    height: 30px;
+}
+
+a.childPara {
+    font-weight: normal;
+}
+
+.socialImages {
+    margin-top: -22px;
+    width: 100px;
+}
+
+    .socialImages a {
+        padding-top: 26px;
+        margin-left: -11px;
+    }
+
+#twitter, #linkedin, #facebook {
+    z-index: 1000;
+}
+
+#linkedin {
+    padding-left: 6px;
+}
+
+.alignRight {
+    float: none;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.alignRight, .topParaBenefitsRight {
+    text-align: right;
+}
+
+.homeBodyBottomSpacing {
+    padding-bottom: 10px;
+}
+
+.facebookBig {
+    margin: 43px 0 0 -3px;
+}
+
+.topParaBenefitsRight, .medicalSpace {
+    width: 100%;
+}
+
+.positionFix {
+    bottom: -3px;
+}
+
+/*changed styles*/
+/*master page*/
+.leftFooter {
+    float: left;
+    margin-left: 5px;
+    margin-right: 0px;
+    margin-top: 25px;
+}
+
+.rightFooter {
+    margin-top: 40px;
+    float: right;
+    margin-right: 9px;
+}
+
+.leftFooter a {
+    margin-left: 4px;
+}
+
+.selected {
+    border-bottom: #fdbc34 4px solid !important;
+}
+
+/*default page*/
+.centerImage {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    height: 294px;
+}
+
+.leftLowerDiv {
+    margin-top: 8px;
+}
+
+.leftDiv {
+    float: left;
+}
+
+.centerDiv {
+    float: left;
+    margin-left: 9px;
+}
+
+.rightDiv {
+    height: 100%;
+    width: 485px;
+    margin-left: 9px;
+    float: right;
+}
+
+.rightTopDiv {
+    height: 141px;
+    background-color: #fdbc34;
+}
+
+.rightTopDivContent {
+    font-size: 31px;
+    color: #ffffff;
+    font-weight: lighter;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 111px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+    .rightTopDivContent div {
+        margin-top: 10px;
+    }
+
+.rightBottomDiv {
+    height: 141px;
+    margin-top: 10px;
+}
+
+.rightBottomLeftDiv {
+    width: 238px;
+    background-color: #fdbc34;
+    float: left;
+    font-size: 22px;
+    color: #ffffff;
+    font-weight: lighter;
+    height: 100%;
+}
+
+.rightBottomRightDiv {
+    float: right;
+}
+
+.mainPageContent {
+    border-top: #e0e0e0 1px solid;
+    clear: both;
+}
+
+.topContent {
+    height: 105px;
+    border-bottom: #e0e0e0 1px solid;
+}
+
+.leftTopContent {
+    margin-top: 10px;
+    float: left;
+    height: 85px;
+}
+
+    .leftTopContent .title {
+        margin-top: 10px !important;
+    }
+
+.rightTopContent {
+    float: right;
+}
+
+.leftBottomContent, .rightBottomContent {
+    height: 220px;
+}
+
+.leftTopContent, .leftBottomContent {
+    width: 489px;
+    border-right: #e0e0e0 1px dashed;
+}
+
+.rightTopContent, .rightBottomContent {
+    width: 489px;
+}
+
+.title {
+    margin-top: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #fdbc34;
+}
+
+.content {
+    margin-top: 11px;
+    font-size: 13px;
+    color: #474a48;
+    line-height: 19px;
+}
+
+.contentAddr {
+    margin-top: 5px;
+    font-size: 13px;
+    color: #474a48;
+    line-height: 19px;
+}
+
+.contentNews {
+    margin-top: 6px;
+    font-size: 13px;
+    color: #474a48;
+    line-height: 19px;
+}
+
+.contentPara {
+    padding-top: 4px;
+    margin-bottom: 7px;
+}
+
+.contentFirstPara {
+    margin-bottom: 7px;
+}
+
+.content a, .contentAddr a {
+    color: #23adb5 !important;
+    font-weight: normal !important;
+}
+
+    .content a:hover, .contentAddr a:hover {
+        color: #fdbc34 !important;
+        font-weight: normal !important;
+    }
+
+.contentNews a {
+    color: #23adb5 !important;
+    font-weight: normal !important;
+}
+
+    .contentNews a:hover {
+        color: #fdbc34 !important;
+        font-weight: normal !important;
+    }
+
+.contentNews li {
+    margin-bottom: 6px;
+}
+
+.leftEmail {
+    margin-top: 3px;
+    float: left;
+    padding-left: 15px;
+}
+
+.images {
+    margin-top: 18px;
+}
+
+    .images img {
+        margin-top: 6px;
+        display: block;
+    }
+
+.leftBottomContent {
+    float: left;
+    margin-top: 10px;
+}
+
+    .leftBottomContent .title, .rightBottomContent .title {
+        margin-top: 5px !important;
+    }
+
+.rightBottomContent {
+    margin-top: 10px;
+    float: right;
+}
+
+.benefits {
+    float: left;
+    border-right: #e0e0e0 1px dashed;
+    width: 218px;
+    padding-right: 15px;
+    height: 220px;
+}
+
+.company {
+    float: left;
+    width: 218px;
+    padding-left: 15px;
+}
+
+.news {
+    width: 218px;
+    border-right: #e0e0e0 1px dashed;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 220px;
+}
+
+.jobs {
+    width: 218px;
+    float: left;
+    padding-left: 15px;
+}
+
+/*contact*/
+.headText {
+    clear: both;
+    background-color: #fdbc34;
+    width: 577px;
+    margin-left: 0px;
+    height: 46px;
+    float: left;
+}
+
+.text {
+    font-size: 31px;
+    color: #ffffff;
+    font-weight: lighter;
+    padding: 11px 0px 11px 10px;
+}
+
+.headImage img {
+    margin-left: 9px;
+}
+
+.head {
+    margin-top: 19px;
+}
+
+.leftDivision {
+    width: 76%;
+    float: left;
+}
+
+.rightDivision {
+    width: 24%;
+    float: right;
+}
+
+.contactDetailsDiv {
+    width: 804px;
+}
+
+.addressDiv, .phoneDiv, .emailDiv {
+    width: 268px;
+    padding-top: 5px;
+}
+
+.addressDiv, .phoneDiv {
+    float: left;
+}
+
+.emailDiv {
+    float: right;
+}
+
+.directionsDiv {
+    clear: both;
+    padding-top: 30px;
+}
+
+#getDirection {
+    margin-top: 20px;
+}
+
+    #getDirection #input {
+        width: 283px !important;
+        margin-left: 7px !important;
+    }
+
+#mapviewer {
+    margin-left: 0px !important;
+    position: relative !important;
+    width: 700px !important;
+    height: 320px !important;
+}
+
+.titleMessageDiv {
+    color: #474a48;
+    font-family: "Segoe UI";
+    font-size: 14px;
+    font-weight: normal !important;
+    float: left;
+    padding-top: 2px;
+    margin-right: 2px;
+}
+
+#inputAddress {
+    color: #8b8b8b;
+    font-family: "Segoe UI" !important;
+    font-size: 12px !important;
+    padding-left: 5px;
+}
+
+.titleMessage {
+    color: #474a48;
+    font-family: "Segoe UI", Tahoma, Verdana, Sans-serif;
+    font-size: 13px;
+    font-weight: normal !important;
+}
+
+.txtBoxBorder {
+    height: 22px;
+    border: 1px solid #c9c9c9;
+    margin-left: 4px;
+    font-family: "Segoe UI", Tahoma, Verdana, Sans-serif;
+    font-size: 13px;
+    width: 200px;
+    padding-left: 5px;
+}
+
+.helpText {
+    font-style: italic;
+    font-weight: lighter;
+    color: #c9c9c9 !important;
+}
+
+.buttonStyle {
+    color: #ffffff !important;
+    background-color: #49bbc1;
+    border-style: none;
+    height: 22px;
+    text-align: center;
+    font-size: 12px !important;
+    font-weight: lighter;
+}
+
+#show {
+    width: 140px;
+    margin-left: 7px;
+}
+
+#clear {
+    width: 70px;
+    margin-left: 7px;
+}
+
+#directions {
+    color: #474a48 !important;
+    font-family: "Segoe UI", Tahoma, Verdana, Sans-Serif;
+    font-size: 14px;
+    margin-top: 10px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+h3#turnTitle {
+    font-weight: normal;
+    font-family: "Segoe UI", Tahoma, Verdana, Sans-Serif;
+    font-size: 14px;
+    color: #fdbc34;
+    padding: 4px 0px 12px 0px;
+    text-transform: uppercase;
+    height: 8px !important;
+}
+
+b.turnNumber {
+    padding-right: 6px;
+}
+
+b#totalDistance {
+    padding: 10px 0px 10px 0px;
+}
+
+.total {
+    margin-top: 5px !important;
+}
+
+.connectDiv, .queryDiv {
+    clear: both;
+    border: 3px solid #fdbc34;
+    padding: 0px 0px 15px 11px;
+}
+
+    .queryDiv .title, .connectDiv .title {
+        margin-top: 8px !important;
+    }
+
+.connectDiv {
+    margin-top: 28px;
+}
+
+.connectDivImage {
+    padding-left: 40px;
+    margin-top: 10px;
+}
+
+/*Default page search*/
+a#search {
+    cursor: pointer;
+}
+
+.searchTitle {
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: lighter;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.searchText {
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: normal !important;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+.searchInputDiv {
+    font-size: 14px;
+    background-color: #ffffff;
+    font-weight: lighter;
+    margin-left: 15px;
+    margin-right: 0px;
+}
+
+.inputText {
+    width: 145px;
+    float: left;
+}
+
+.searchImage {
+    float: right;
+    margin: 3px 3px 0px 0px;
+}
+
+.searchInputDiv .inputText input {
+    margin-left: 0px;
+    padding-left: 0px;
+    width: 145px !important;
+    margin-top: 2px;
+}
+
+.searchInputDiv img {
+    margin-top: 1px;
+}
+
+/*Hire Talent*/
+.subTitle {
+    font-family: "Segoe UI";
+    font-size: 18px;
+    color: #FDBC34;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.childleftPara, .childPara {
+    font-family: "Segoe UI";
+    font-size: 13px;
+    color: #474A48;
+    padding-bottom: 20px;
+    line-height: 19px;
+}
+
+.bold {
+    font-family: "Segoe UI";
+    font-size: 13px;
+    color: #FDBC34;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.childListRight {
+    font-family: "Segoe UI";
+    font-size: 13px;
+    color: #474A48;
+    font-size: 13px;
+    line-height: 22px;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    margin-left: 7px;
+}
+
+.childParaLink {
+    color: #49bbc1;
+}
+
+.childListRightUpper {
+    padding-bottom: 10px !important;
+}
+
+.titleHire {
+    margin-top: 12px;
+    margin-bottom: 25px;
+    padding: 11px 16px;
+    padding-bottom: 17px;
+    padding-left: 10px;
+    background-color: #FDBC34;
+    color: White;
+    font-family: "Segoe UI";
+    font-size: 31px;
+    display: inline;
+    width: 551px !important;
+    float: left;
+    vertical-align: middle;
+    font-weight: lighter;
+}
+
+.doubleHead {
+    background-image: url("../images/header_doubleSquareEnding.png");
+    height: 46px;
+    width: 103px;
+    float: left;
+    margin-left: 9px;
+    margin-top: 12px;
+    margin-bottom: 25px;
+}
+
+.clearFloats {
+    clear: both;
+}
+
+a.childParaLink:hover {
+    color: #FDBC34;
+}
+
+.reducePadding {
+    margin-top: 28px !important;
+}
+
+/*Benefit changes*/
+.inlineSpace {
+    height: 15px;
+}
+
+.childParaUpper {
+    font-family: "Segoe UI";
+    font-size: 13px;
+    color: #474A48;
+    padding-bottom: 0px;
+    line-height: 19px;
+    margin-top: 4px;
+}
+
+.childListBenefits {
+    font-family: "Segoe UI";
+    font-size: 13px;
+    color: #474A48;
+    font-size: 13px;
+    line-height: 19px;
+    padding-bottom: 0px;
+}
+
+    .childListBenefits li {
+        background: url("../Images/bullet.png") no-repeat 0 0px;
+        padding-left: 18px;
+    }
+
+.benefitsPara {
+    font-family: "Segoe UI";
+    font-size: 13px;
+    color: #474A48;
+    padding-bottom: 5px;
+    line-height: 19px;
+}
+
+.subTopicRight a {
+    color: #23ADB5;
+    font-family: "Segoe UI";
+    font-size: 13px;
+    padding-bottom: 2px;
+    padding-top: 5px;
+}
+
+    .subTopicRight a:hover {
+        color: #fdbc34;
+    }
+
+.leftMedicalSpace {
+    margin-top: 2px !important;
+}
+
+.childParaBenefit {
+    font-family: "Segoe UI";
+    font-size: 13px;
+    color: #474A48;
+    padding-bottom: 20px;
+    line-height: 19px;
+    margin-top: 4px;
+}
