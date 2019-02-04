@@ -1,7 +1,7 @@
 ﻿(function (d) {
     var e = function (a, b, c, f) {
         this.target = a; this.url = b; this.html = []; this.effectQueue = []; this.options = d.extend({
-            ssl: !1, host: "www.feedrapp.info", limit: null, key: null, layoutTemplate: "<ul>{entries}</ul>", entryTemplate: '<li><a href="{url}">[{author}@{date}] {title}</a><br/>{shortBodyPlain}</li>', tokens: {}, outputMode: "json", dateFormat: "dddd MMM Do", dateLocale: "en", effect: "show", offsetStart: !1, offsetEnd: !1, error: function () { console.log("jQuery RSS: url doesn't link to RSS-Feed") }, onData: function () { },
+            ssl: !1, host: "https://www.feedrapp.info", limit: null, key: null, layoutTemplate: "<ul>{entries}</ul>", entryTemplate: '<li><a href="{url}">[{author}@{date}] {title}</a><br/>{shortBodyPlain}</li>', tokens: {}, outputMode: "json", dateFormat: "dddd MMM Do", dateLocale: "en", effect: "show", offsetStart: !1, offsetEnd: !1, error: function () { console.log("jQuery RSS: url doesn't link to RSS-Feed") }, onData: function () { },
             success: function () { }
         }, c || {}); this.callback = f || this.options.success
     }; e.htmlTags = "doctype,html,head,title,base,link,meta,style,script,noscript,body,article,nav,aside,section,header,footer,h1-h6,hgroup,address,p,hr,pre,blockquote,ol,ul,li,dl,dt,dd,figure,figcaption,div,table,caption,thead,tbody,tfoot,tr,th,td,col,colgroup,form,fieldset,legend,label,input,button,select,datalist,optgroup,option,textarea,keygen,output,progress,meter,details,summary,command,menu,del,ins,img,iframe,embed,object,param,video,audio,source,canvas,track,map,area,a,em,strong,i,b,u,s,small,abbr,q,cite,dfn,sub,sup,time,code,kbd,samp,var,mark,bdi,bdo,ruby,rt,rp,span,br,wbr".split(",");
