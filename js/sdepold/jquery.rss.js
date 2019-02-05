@@ -10,7 +10,7 @@
 
         this.options = $.extend({
             ssl: false,
-            host: 'https://www.feedrapp.info',
+            host: 'www.feedrapp.info',
             limit: null,
             key: null,
             layoutTemplate: '<ul>{entries}</ul>',
@@ -48,7 +48,7 @@
     ];
 
     RSS.prototype.load = function (callback) {
-        var apiProtocol = 'http' + (this.options.ssl ? 's' : '');
+        var apiProtocol = 'https';//+ (this.options.ssl ? 's' : '');
         var apiHost = apiProtocol + '://' + this.options.host;
         var apiUrl = apiHost + '?callback=?&q=' + encodeURIComponent(this.url);
 
