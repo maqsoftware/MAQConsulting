@@ -5468,13 +5468,6 @@ ul.nav-tabs {
     font-weight: bold;
 }
 
-#resetSearch {
-    margin-top: 0;
-    padding-top: 15px;
-    height: 70%;
-    width: 100%;
-}
-
 #searchJobListing {
     width: 100%;
 }
@@ -5505,6 +5498,9 @@ ul.nav-tabs {
     width: 100%;
 }
 
+#jobDescriptionContainer{
+    margin-top: 20px;
+}
 .pager {
     padding-left: 0;
     margin: 20px 0;
@@ -5558,12 +5554,7 @@ ul.nav-tabs {
 }
 
 #jobActionBtnContainer {
-    display: block;
-    float: right;
-    position: relative;
-    z-index: 1;
-    padding-right: 0;
-    width: 205px;
+    width: 275px;
 }
 
 #jobDetails div {
@@ -5572,13 +5563,19 @@ ul.nav-tabs {
 
 #reset {
     padding-right: 0;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-bottom: 40px;
 }
 
 @media (max-width: 575px) {
     #resetSearch {
         padding-top: 9px;
         height: auto;
+        width: 100%;
     }
+
     #jobListingsData {
         margin-top: 15px;
     }
@@ -5649,6 +5646,12 @@ ul.nav-tabs {
     color: #b2b2b2 !important;
 }
 
+.row_pointer:hover {
+    cursor: pointer;
+    color: red;
+    text-decoration: underline;
+}
+
 #jobTitle {
     text-transform: none;
 }
@@ -5657,9 +5660,13 @@ ul.nav-tabs {
     padding-right: 0;
 }
 
-    #jobActionBtnContainer div a {
-        float: right;
-    }
+#jobActionBtnContainer div a {
+    float: right;
+}
+
+#jobActionBtnContainer .btn_inline {
+    display: inline-block;
+}
 
 #jobListings > tbody .rowEven > td, #jobListings > tbody .rowOdd > td {
     padding-left: 15px;
