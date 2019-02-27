@@ -5577,6 +5577,15 @@ ul.nav-tabs {
     margin-bottom: 40px;
 }
 
+#jobListingContainer #jobDescriptionContainer table {
+    width: 100%!important;
+    border: 0;
+}
+
+div #jobDescriptionContainer {
+    padding: 20px;
+}
+
 @media (max-width: 575px) {
     #resetSearch, #jobActionBtnContainer {
         padding-top: 9px;
