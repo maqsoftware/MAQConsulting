@@ -5418,6 +5418,12 @@ ul.nav-tabs {
     }
 }
 
+@media (min-width: 359px) and (max-width: 400px) {
+    #sendToFriendBtn{
+        height:50px;
+    }
+}
+
 @media (max-width: 545px) {
 }
 
@@ -5500,6 +5506,8 @@ ul.nav-tabs {
 
 #jobDescriptionContainer{
     margin-top: 20px;
+    padding-left: 1.2em !important;
+    padding-right: 1.2em !important;
 }
 .pager {
     padding-left: 0;
@@ -5564,13 +5572,13 @@ ul.nav-tabs {
 #reset {
     padding-right: 0;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     width: 100%;
     margin-bottom: 40px;
 }
 
 @media (max-width: 575px) {
-    #resetSearch {
+    #resetSearch, #jobActionBtnContainer {
         padding-top: 9px;
         height: auto;
         width: 100%;
@@ -5675,6 +5683,10 @@ ul.nav-tabs {
 #jobListings > tbody > tr > th {
     padding-bottom: 15px;
     padding-left: 15px;
+}
+
+#reset > div {
+    margin-right: 10px;
 }
 
 td {
