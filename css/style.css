@@ -5577,15 +5577,6 @@ ul.nav-tabs {
     margin-bottom: 40px;
 }
 
-#jobListingContainer #jobDescriptionContainer table {
-    width: 100%!important;
-    border: 0;
-}
-
-div #jobDescriptionContainer {
-    padding: 20px;
-}
-
 @media (max-width: 575px) {
     #resetSearch, #jobActionBtnContainer {
         padding-top: 9px;
@@ -5805,4 +5796,14 @@ td {
         padding: 4px 6px;
         font-size: 8px;
     }
+}
+
+div#dttable_filter {
+    margin-top: 3.25px;
+}
+select[aria-controls=dttable] {
+    padding-top: 3px;
+    padding-right: 2px;
+    padding-bottom: 3px;
+    padding-left: 7px;
 }
