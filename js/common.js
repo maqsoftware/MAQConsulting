@@ -14,7 +14,7 @@ function getParameterByName(name) {
 }
 
 function redirectPowerBI() {
-    window.location.href = "/#expertise/powerbi"; 
+    window.location.href = "/#expertise/powerbi";
 }
 
 function setTabNavLinkBehavior() {
@@ -26,7 +26,7 @@ function setTabNavLinkBehavior() {
 function closeMenuIfOpen() {
     $("a, a *, section, section *, .footer, .footer *, #map, #map *").click(function () {
         if ($(this).hasClass("menu-has-sub") || $(this).hasClass("fa-angle-down") || $(this).hasClass("fa-angle-up")) {
-            return; 
+            return;
         }
         if ($(".nav-bar-icon").length && $(".nav-bar-icon").hasClass("active")) {
             $(".nav-bar-icon").removeClass("active");
@@ -308,7 +308,6 @@ function showMap(Latitude, Longitude, address) {
         }
     });
 
-
     map.mapTypes.set('styled_map', styledMapType);
     map.setMapTypeId('styled_map');
 
@@ -363,14 +362,6 @@ function showMap(Latitude, Longitude, address) {
 function JSON_CALLBACK() {
     alert("Yes");
 }
-var originalSearchInput,
-    sendToFriendTemplate = 'mailto:?subject=Job Opening: {0} &body=I came across this job on the internet and I thought that you or someone you know might be interested. %0D%0A %0D%0A{1}',
-
-    applyJobTemplate = "mailto:msjobs@maqconsulting.com?subject=Job Opening: {0} %0D%0A &body=Hello All, %0D%0A %0D%0APlease find below required details:%0D%0AFirst Name:%0D%0ALast Name:%0D%0AEmail:%0D%0AMobile No:%0D%0A %0D%0A*Please attach your latest Resume with this Email.",
-    catsoneUrl,
-    linkType,
-    jsonData;
-
 
 $(function () {
     "use strict";
@@ -399,10 +390,6 @@ String.prototype.replaceAll = function (search, replacement) {
     var target = this;
     return target.replace(new RegExp(search.source, 'g'), replacement);
 };
-
-
-
-
 
 function RenderJobs() {
 
@@ -440,24 +427,33 @@ function RenderJobs() {
 
 
 function Redirect(job_id) {
+
+    var sendToFriendTemplate = 'mailto:?subject=Job Opening: {0} &body=I came across this job on the internet and I thought that you or someone you know might be interested. %0D%0A %0D%0A{1}',
+
+    applyJobTemplate = "mailto:msjobs@maqconsulting.com?subject=Job Opening: {0} %0D%0A &body=Hello All, %0D%0A %0D%0APlease find below required details:%0D%0AFirst Name:%0D%0ALast Name:%0D%0AEmail:%0D%0AMobile No:%0D%0A %0D%0A*Please attach your latest Resume with this Email.";
+
     $("#jobListingsData").hide();
     $(".loadingIcon").show();
 
     var noofentries = Number(document.getElementById("dumpdescription").getElementsByTagName("ul")[0].getElementsByClassName("div_entries")[0].getElementsByTagName("span")[1].textContent);
     var url_string, url, c;
     for (i = 0; i < noofentries; i++) {
+
         url_string = document.getElementById("dumpdescription").getElementsByTagName("ul")[0].getElementsByClassName("div_entries")[i].getElementsByTagName("span")[0].textContent;
         url = new URL(url_string);
         c = url.searchParams.get("jobOrderID");
-        
+        url_string = url_string.toString();
+
         if (c == job_id) {
+            document.getElementById("jobDescriptionContainer").innerHTML = "";
             document.getElementById("jobDescriptionContainer").innerHTML = document.getElementById("dumpdescription").getElementsByTagName("ul")[0].getElementsByClassName("div_entries")[i].innerHTML;
             var sJobTitle = document.getElementById("jobDescriptionContainer").getElementsByTagName("h3")[0].innerHTML;
             sendToFriendTemplate = sendToFriendTemplate.replace("{0}", sJobTitle);
             url_string = encodeURIComponent(url_string);
-            sendToFriendTemplate = sendToFriendTemplate.replace("{1}", "How to Apply: Please email your resume to MAQ Consulting at msjobs@maqconsulting.com with the subject of " + sJobTitle + "%0D%0A %0D%0A Link: " +url_string);
+            sendToFriendTemplate = sendToFriendTemplate.replace("{1}", "How to Apply: Please email your resume to MAQ Consulting at msjobs@maqconsulting.com with the subject of " + sJobTitle + "%0D%0A %0D%0A Link: " + url_string);
             applyJobTemplate = applyJobTemplate.replace("{0}", sJobTitle);
             document.getElementById("applyJobBtn").parentElement.setAttribute("href", applyJobTemplate);
+
             document.getElementById("sendToFriendBtn").setAttribute("href", sendToFriendTemplate);
             break;
         }
