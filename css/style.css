@@ -5418,6 +5418,12 @@ ul.nav-tabs {
     }
 }
 
+@media (min-width: 359px) and (max-width: 400px) {
+    #sendToFriendBtn{
+        height:50px;
+    }
+}
+
 @media (max-width: 545px) {
 }
 
@@ -5468,13 +5474,6 @@ ul.nav-tabs {
     font-weight: bold;
 }
 
-#resetSearch {
-    margin-top: 0;
-    padding-top: 15px;
-    height: 70%;
-    width: 100%;
-}
-
 #searchJobListing {
     width: 100%;
 }
@@ -5505,6 +5504,11 @@ ul.nav-tabs {
     width: 100%;
 }
 
+#jobDescriptionContainer{
+    margin-top: 20px;
+    padding-left: 1.2em !important;
+    padding-right: 1.2em !important;
+}
 .pager {
     padding-left: 0;
     margin: 20px 0;
@@ -5558,12 +5562,7 @@ ul.nav-tabs {
 }
 
 #jobActionBtnContainer {
-    display: block;
-    float: right;
-    position: relative;
-    z-index: 1;
-    padding-right: 0;
-    width: 205px;
+    width: 275px;
 }
 
 #jobDetails div {
@@ -5572,13 +5571,19 @@ ul.nav-tabs {
 
 #reset {
     padding-right: 0;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 40px;
 }
 
 @media (max-width: 575px) {
-    #resetSearch {
+    #resetSearch, #jobActionBtnContainer {
         padding-top: 9px;
         height: auto;
+        width: 100%;
     }
+
     #jobListingsData {
         margin-top: 15px;
     }
@@ -5649,6 +5654,12 @@ ul.nav-tabs {
     color: #b2b2b2 !important;
 }
 
+.row_pointer:hover {
+    cursor: pointer;
+    color: red;
+    text-decoration: underline;
+}
+
 #jobTitle {
     text-transform: none;
 }
@@ -5657,9 +5668,13 @@ ul.nav-tabs {
     padding-right: 0;
 }
 
-    #jobActionBtnContainer div a {
-        float: right;
-    }
+#jobActionBtnContainer div a {
+    float: right;
+}
+
+#jobActionBtnContainer .btn_inline {
+    display: inline-block;
+}
 
 #jobListings > tbody .rowEven > td, #jobListings > tbody .rowOdd > td {
     padding-left: 15px;
@@ -5668,6 +5683,10 @@ ul.nav-tabs {
 #jobListings > tbody > tr > th {
     padding-bottom: 15px;
     padding-left: 15px;
+}
+
+#reset > div {
+    margin-right: 10px;
 }
 
 td {
@@ -5777,4 +5796,14 @@ td {
         padding: 4px 6px;
         font-size: 8px;
     }
+}
+
+div#dttable_filter {
+    margin-top: 3.25px;
+}
+select[aria-controls=dttable] {
+    padding-top: 3px;
+    padding-right: 2px;
+    padding-bottom: 3px;
+    padding-left: 7px;
 }
