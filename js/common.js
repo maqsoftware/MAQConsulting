@@ -441,7 +441,7 @@ function Redirect(job_id) {
     for (i = 0; i < noofentries; i++) {
 
         url_string = document.getElementById("dumpdescription").getElementsByTagName("ul")[0].getElementsByClassName("div_entries")[i].getElementsByTagName("span")[0].textContent;
-        const splitURL = new URL(url).pathname.split("/");
+        const splitURL = new URL(url_string).pathname.split("/");
         c = splitURL[splitURL.length - 2].split("-")[0];
         url_string = url_string.toString();
 
