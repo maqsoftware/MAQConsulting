@@ -410,8 +410,9 @@ function RenderJobs() {
         date = $.datepicker.formatDate("M d", new Date(date_raw));
         title_raw = document.getElementById("dumptable").getElementsByTagName("tr")[i].getElementsByTagName("td")[1].textContent;
         [title, Location] = title_raw.split('-');
-        var url = new URL(url);
-        job_id = url.searchParams.get("jobOrderID");
+
+        const splitURL = new URL(url).pathname.split("/");
+        job_id = splitURL[splitURL.length - 2].split("-")[0];
         table = table + '<tr><td>' + job_id + '</td><td>' + date + '</td><td onClick=\"Redirect(\'' + job_id + '\')\"  class = \"row_pointer\"> ' + title + '</td><td>' + Location + '</td></tr>';
 
     }
@@ -440,8 +441,8 @@ function Redirect(job_id) {
     for (i = 0; i < noofentries; i++) {
 
         url_string = document.getElementById("dumpdescription").getElementsByTagName("ul")[0].getElementsByClassName("div_entries")[i].getElementsByTagName("span")[0].textContent;
-        url = new URL(url_string);
-        c = url.searchParams.get("jobOrderID");
+        const splitURL = new URL(url_string).pathname.split("/");
+        c = splitURL[splitURL.length - 2].split("-")[0];
         url_string = url_string.toString();
 
         if (c == job_id) {
