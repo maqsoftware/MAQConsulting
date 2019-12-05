@@ -436,7 +436,7 @@ function Redirect(job_id) {
     $("#jobListingsData").hide();
     $(".loadingIcon").show();
 
-    var noofentries = Number(document.getElementById("dumpdescription").getElementsByTagName("ul")[0].getElementsByClassName("div_entries")[0].getElementsByTagName("span")[1].textContent);
+    var noofentries = Number(document.getElementById("dumpdescription").getElementsByTagName("ul")[0].getElementsByClassName("div_entries")[0].getElementsByClassName("totalEntries")[0].textContent);
     var url_string, url, c;
     for (i = 0; i < noofentries; i++) {
 
@@ -495,6 +495,6 @@ $(document).ready(function () {
     $("#dumpdescription").rss("https://maqconsulting.catsone.com/xml/index.php?siteID=5046&portalID=850&subdomain=maqconsulting",
      {
          limit: 100,
-         entryTemplate: '<div class= "div_entries"><br><br><div class= ""><h3>{title}</h3></div><br><div class = "">{body}</div><span class = "tohide url">{url}</span><span class = "tohide">{totalEntries}</span></div>',
+         entryTemplate: '<div class= "div_entries"><br><br><div class= ""><h3>{title}</h3></div><br><div class = "">{body}</div><span class = "tohide url">{url}</span><span class = "tohide totalEntries">{totalEntries}</span></div>',
      })
 });
