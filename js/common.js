@@ -123,9 +123,9 @@ function handleScroll() {
 
 var oMapData =
             {
-                address: "15446 Bel-Red Road, Second Floor,\nRedmond, WA 98052",
-                lat: 47.633087,
-                long: -122.133202
+                address: "2027 152nd AVE NE,\nRedmond, WA 98052",
+                lat: 47.6344109,
+                long: -122.1584092
             };
 function initMap() {
     showMap(oMapData.lat, oMapData.long, oMapData.address);
