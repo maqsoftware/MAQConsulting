@@ -598,21 +598,18 @@
     <script src="js/sdepold/jquery.rss.js?v=20190205" type="text/javascript"></script>
     <script src="js/sdepold/sdepold.js?v=20190205" type="text/javascript"></script>
     <script src="js/common.js?v=20200930" type="text/javascript"></script>
-    <script src="/node_modules/rss-parser/dist/rss-parser.min.js"></script>
     <script>
 
-        // Note: some RSS feeds can't be loaded in the browser due to CORS security.
-        // To get around this, you can use a proxy.
-        const CORS_PROXY = "https://cors-anywhere.herokuapp.com/"
+        // const CORS_PROXY = "https://cors-anywhere.herokuapp.com/"
+        //Add the deployed link to proxy server(for time being it is kept localhost).
+        const CORS_PROXY = "http://localhost:3000/"
 
-        let parser = new RSSParser();
-        parser.parseURL('https://maqconsulting.catsone.com/xml/index.php?siteID=5046&portalID=850&subdomain=maqconsulting')
-            .then(feed => {
-                console.log(feed);
+        fetch(CORS_PROXY+"rss")
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
             })
-            .catch(error => {
-                console.error(error);
-            });
+
     </script>
 
     <script
