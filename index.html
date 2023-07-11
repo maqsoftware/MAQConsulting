@@ -259,13 +259,14 @@
                 <div class="text-center">
                     <h3>Find Work</h3>
                     <div class="spacer-15"></div>
-                    <p class="lead">Below are current job listings. Click a listing for further information or to apply.
+                    <p id="jobs_field" class="lead">Below are current job listings. Click a listing for further
+                        information or to apply.
                     </p>
                 </div>
                 <div class="spacer-60"></div>
 
                 <div class="container">
-                    <div class="loadingIcon Loading">
+                    <div id="loadingIcon" class="loadingIcon Loading">
                     </div>
                     <div id="jobListingContainer" class="row">
 
@@ -599,16 +600,42 @@
     <script src="js/sdepold/sdepold.js?v=20190205" type="text/javascript"></script>
     <script src="js/common.js?v=20200930" type="text/javascript"></script>
     <script>
-
-        // const CORS_PROXY = "https://cors-anywhere.herokuapp.com/"
-        //Add the deployed link to proxy server(for time being it is kept localhost).
-        const CORS_PROXY = "http://localhost:3000/"
-
-        fetch(CORS_PROXY+"rss")
+        const CORS_PROXY = "https://cors-proxy-h6xnzgl60-amankothari20.vercel.app/"
+        fetch(CORS_PROXY + "rss")
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                RenderJobs(data)
             })
+        function RenderJobs(data) {
+            var tr = '';
+            for (var i = 0; i < data.items.length; i++) {
+                url = data.items[i].link;
+                date_raw = data.items[i].pubDate;
+                date = $.datepicker.formatDate("M d", new Date(date_raw));
+                [title, Location] = data.items[i].title.split('-');
+
+                const splitURL = new URL(url).pathname.split("/");
+                job_id = splitURL[splitURL.length - 2].split("-")[0];
+                tr = $('<tr/>');
+                tr.append('<td>' + job_id + '</td>');
+                tr.append('<td>' + date + '</td>');
+                tr.append(`<a href="${data.items[i].link}"><td class = \"row_pointer\">${title}</td></a>`);
+                tr.append('<td>' + Location + '</td>');
+                $('#dttable').append(tr);
+            }
+
+            if (data.items.length) {
+                $(".loadingIcon").hide();
+                $(".No_jobs_field").hide();
+                $(".jobListingContainer").show();
+                $("#jobListingsData").show();
+            } else {
+                $(".jobListingContainer").hide();
+                $("#jobListingsData").hide();
+                $(".loadingIcon").hide();
+                document.getElementById('jobs_field').innerText = "We don't have any openings currently available. Please check back later."
+            }
+        }
 
     </script>
 
