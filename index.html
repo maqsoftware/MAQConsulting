@@ -608,6 +608,7 @@
             })
         function RenderJobs(data) {
             var tr = '';
+            var dataForTable = []
             for (var i = 0; i < data.items.length; i++) {
                 url = data.items[i].link;
                 date_raw = data.items[i].pubDate;
@@ -616,12 +617,13 @@
 
                 const splitURL = new URL(url).pathname.split("/");
                 job_id = splitURL[splitURL.length - 2].split("-")[0];
-                tr = $('<tr/>');
-                tr.append('<td>' + job_id + '</td>');
-                tr.append('<td>' + date + '</td>');
-                tr.append(`<a href="${data.items[i].link}"><td class = \"row_pointer\">${title}</td></a>`);
-                tr.append('<td>' + Location + '</td>');
-                $('#dttable').append(tr);
+                dataForTable.push({
+                    "job_id": job_id,
+                    "date": date,
+                    "title": title,
+                    "link": data.items[i].link,
+                    "location": Location,
+                })
             }
 
             if (data.items.length) {
@@ -629,6 +631,28 @@
                 $(".No_jobs_field").hide();
                 $(".jobListingContainer").show();
                 $("#jobListingsData").show();
+                $('#dttable')
+                    .DataTable({
+                        "destroy": true,
+                        "pagination": true,
+                        "aaData": dataForTable,
+                        "columns": [{
+                            "data": "job_id",
+                            "title": "JOB ORDER"
+                        }, {
+                            "data": "date",
+                            "title": "POSTED"
+                        }, {
+                            "data": "title",
+                            "title": "JOB TITLE",
+                            fnCreatedCell: function (nTd, sData, oData, iRow, iCol) {
+                                $(nTd).html("<a href='" + oData.link + "'>" + oData.title + "</a>");
+                            }
+                        }, {
+                            "data": "location",
+                            "title": "LOCATION"
+                        }]
+                    });
             } else {
                 $(".jobListingContainer").hide();
                 $("#jobListingsData").hide();
