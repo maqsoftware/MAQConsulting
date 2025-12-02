@@ -311,7 +311,7 @@ function showMap(Latitude, Longitude, address) {
     map.mapTypes.set('styled_map', styledMapType);
     map.setMapTypeId('styled_map');
 
-    oMarker = new google.maps.Marker({
+    var oMarker = new google.maps.Marker({
         position: oLatLng,
         map: map,
         title: 'MAQ Software\n' + address,
@@ -326,41 +326,6 @@ function showMap(Latitude, Longitude, address) {
         infowindow.open(map, oMarker);
     });
     infowindow.open(map, oMarker);
-
-    google.maps.Marker.prototype.setLabel = function (label) {
-        this.label = new MarkerLabel({
-            map: this.map,
-            marker: this,
-            text: label
-        });
-        this.label.bindTo('position', this, 'position');
-    };
-
-    var MarkerLabel = function (options) {
-        this.setValues(options);
-        this.span = document.createElement('span');
-        this.span.className = 'map-marker-label';
-    };
-
-    MarkerLabel.prototype = $.extend(new google.maps.OverlayView(), {
-        onAdd: function () {
-            this.getPanes().overlayImage.appendChild(this.span);
-            var self = this;
-            this.listeners = [
-            google.maps.event.addListener(this, 'position_changed', function () { self.draw(); })];
-        },
-        draw: function () {
-            var text = String(this.get('text'));
-            var position = this.getProjection().fromLatLngToDivPixel(this.get('position'));
-            this.span.innerHTML = text;
-            this.span.style.left = (position.x - (markerSize.x / 2)) - (text.length * 3) + 10 + 'px';
-            this.span.style.top = (position.y - markerSize.y + 40) + 'px';
-        }
-    });
-}
-
-function JSON_CALLBACK() {
-    alert("Yes");
 }
 
 $(function () {
@@ -386,13 +351,9 @@ function setWaterMarkText() {
         $(this).bind("blur", function () { watermarktext_blur($(this)[0]); });
     });
 }
-String.prototype.replaceAll = function (search, replacement) {
-    var target = this;
-    return target.replace(new RegExp(search.source, 'g'), replacement);
-};
 
 function RenderJobs() {
-
+    "use strict";
     $("#reset").hide();
     $('#resetSearch').hide();
     $('#jobDescriptionContainer').hide();
@@ -400,47 +361,65 @@ function RenderJobs() {
     $("#jobDescriptionContainer").hide();
     $(".loadingIcon").show();
 
+    try {
+        var dumpTable = document.getElementById("dumptable");
+        if (!dumpTable || !dumpTable.getElementsByTagName("tr")[0]) {
+            console.error("Job data not available");
+            $(".loadingIcon").hide();
+            return;
+        }
 
-    var noofentries = Number(document.getElementById("dumptable").getElementsByTagName("tr")[0].getElementsByTagName("td")[4].textContent);
-    var title_raw, title, Location, date_raw, date, url, i, job_id;
-    var table = '';
-    for (i = 0; i < noofentries; i++) {
-        url = document.getElementById("dumptable").getElementsByTagName("tr")[i].getElementsByTagName("td")[0].textContent;
-        date_raw = document.getElementById("dumptable").getElementsByTagName("tr")[i].getElementsByTagName("td")[2].textContent;
-        date = $.datepicker.formatDate("M d", new Date(date_raw));
-        title_raw = document.getElementById("dumptable").getElementsByTagName("tr")[i].getElementsByTagName("td")[1].textContent;
-        [title, Location] = title_raw.split('-');
+        var noofentries = Number(dumpTable.getElementsByTagName("tr")[0].getElementsByTagName("td")[4].textContent);
+        var title_raw, title, Location, date_raw, date, url, i, job_id;
+        var table = '';
+        for (i = 0; i < noofentries; i++) {
+            url = dumpTable.getElementsByTagName("tr")[i].getElementsByTagName("td")[0].textContent;
+            date_raw = dumpTable.getElementsByTagName("tr")[i].getElementsByTagName("td")[2].textContent;
+            date = $.datepicker.formatDate("M d", new Date(date_raw));
+            title_raw = dumpTable.getElementsByTagName("tr")[i].getElementsByTagName("td")[1].textContent;
+            var titleParts = title_raw.split('-');
+            title = titleParts[0] || '';
+            Location = titleParts[1] || '';
 
-        const splitURL = new URL(url).pathname.split("/");
-        job_id = splitURL[splitURL.length - 2].split("-")[0];
-        table = table + '<tr><td>' + job_id + '</td><td>' + date + '</td><td onClick=\"Redirect(\'' + job_id + '\')\"  class = \"row_pointer\"> ' + title + '</td><td>' + Location + '</td></tr>';
-
+            var splitURL = new URL(url).pathname.split("/");
+            job_id = splitURL[splitURL.length - 2].split("-")[0];
+            table = table + '<tr><td>' + job_id + '</td><td>' + date + '</td><td onClick="Redirect(\'' + job_id + '\')" class="row_pointer"> ' + title + '</td><td>' + Location + '</td></tr>';
+        }
+        $("#tbdy").append(table);
+        $('#dttable').DataTable({
+            "destroy": true,
+            "ordering": false
+        });
+        $(".loadingIcon").hide();
+        $(".jobListingContainer").show();
+        $("#jobListingsData").show();
+    } catch (error) {
+        console.error("Error rendering jobs:", error);
+        $(".loadingIcon").hide();
     }
-    $("#tbdy").append(table);
-    $('#dttable').DataTable({
-        "destroy": true
-        , "ordering": false
-    });
-    $(".loadingIcon").hide();
-    $(".jobListingContainer").show();
-    $("#jobListingsData").show();
 }
 
 
 function Redirect(job_id) {
-
-    var sendToFriendTemplate = 'mailto:?subject=Job Opening: {0} &body=I came across this job on the internet and I thought that you or someone you know might be interested. %0D%0A %0D%0A{1}',
-
-    applyJobTemplate = "mailto:msjobs@maqconsulting.com?subject=Job Opening: {0} %0D%0A &body=Hello All, %0D%0A %0D%0APlease find below required details:%0D%0AFirst Name:%0D%0ALast Name:%0D%0AEmail:%0D%0AMobile No:%0D%0A %0D%0A*Please attach your latest Resume with this Email.";
+    "use strict";
+    var sendToFriendTemplate = 'mailto:?subject=Job Opening: {0} &body=I came across this job on the internet and I thought that you or someone you know might be interested. %0D%0A %0D%0A{1}';
+    var applyJobTemplate = "mailto:msjobs@maqconsulting.com?subject=Job Opening: {0} %0D%0A &body=Hello All, %0D%0A %0D%0APlease find below required details:%0D%0AFirst Name:%0D%0ALast Name:%0D%0AEmail:%0D%0AMobile No:%0D%0A %0D%0A*Please attach your latest Resume with this Email.";
 
     $("#jobListingsData").hide();
     $(".loadingIcon").show();
 
-    var noofentries = Number(document.getElementById("dumpdescription").getElementsByTagName("ul")[0].getElementsByClassName("div_entries")[0].getElementsByClassName("totalEntries")[0].textContent);
-    var url_string, url, c;
-    for (i = 0; i < noofentries; i++) {
+    try {
+        var dumpDesc = document.getElementById("dumpdescription");
+        if (!dumpDesc || !dumpDesc.getElementsByTagName("ul")[0]) {
+            console.error("Job description data not available");
+            $(".loadingIcon").hide();
+            return;
+        }
 
-        url_string = document.getElementById("dumpdescription").getElementsByTagName("ul")[0].getElementsByClassName("div_entries")[i].getElementsByClassName("url")[0].textContent;
+        var noofentries = Number(dumpDesc.getElementsByTagName("ul")[0].getElementsByClassName("div_entries")[0].getElementsByClassName("totalEntries")[0].textContent);
+        var url_string, c, i;
+        for (i = 0; i < noofentries; i++) {
+            url_string = dumpDesc.getElementsByTagName("ul")[0].getElementsByClassName("div_entries")[i].getElementsByClassName("url")[0].textContent;
         const splitURL = new URL(url_string).pathname.split("/");
         c = splitURL[splitURL.length - 2].split("-")[0];
         url_string = url_string.toString();
